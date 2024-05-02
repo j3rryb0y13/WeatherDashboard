@@ -1,0 +1,71 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #e7eff6;
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-grow: 1; /* Takes up all available space */
+}
+
+.sidebar {
+  width: 25%;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Adjust height taking header into account */
+  overflow-y: auto; /* Adds scroll to sidebar if content is too long */
+}
+
+.main-content {
+  flex-grow: 1; /* Takes remaining space */
+  padding: 20px;
+  overflow-y: auto; /* Adds scroll to main content if content is too long */
+}
+
+input, button {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#searchHistory, #currentWeather, #forecast {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.forecast-item, .history-item {
+  background: #ffffff;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.forecast-item:hover, .history-item:hover {
+  background: #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .sidebar, .main-content {
+      width: 100%;
+      padding: 10px;
+  }
+}
