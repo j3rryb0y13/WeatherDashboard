@@ -19,7 +19,7 @@ body {
 .container {
   display: flex;
   width: 100%;
-  flex-grow: 1; /* Takes up all available space */
+  flex-grow: 1;
 }
 
 .sidebar {
@@ -28,21 +28,47 @@ body {
   border-right: 2px solid #ddd;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 60px); /* Adjust height taking header into account */
-  overflow-y: auto; /* Adds scroll to sidebar if content is too long */
+  overflow-y: auto;
 }
 
 .main-content {
-  flex-grow: 1; /* Takes remaining space */
+  flex-grow: 1;
   padding: 20px;
-  overflow-y: auto; /* Adds scroll to main content if content is too long */
+  overflow-y: auto;
 }
 
-input, button {
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 100%;
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
+
+#cityInput {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Make space for the search icon */
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+#searchIcon {
+  position: absolute;
+  right: 10px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* Rest of the styles remain the same */
+
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;  /* Adjust color to fit design */
+  margin: 20px 0;  /* Adds space above and below the line */
+}
+
 
 #searchHistory, #currentWeather, #forecast {
   margin-top: 20px;
@@ -64,6 +90,9 @@ input, button {
 }
 
 @media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
   .sidebar, .main-content {
       width: 100%;
       padding: 10px;

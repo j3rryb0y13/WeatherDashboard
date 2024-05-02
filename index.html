@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- For the icon -->
 </head>
 <body>
     <header class="header">
@@ -12,8 +13,11 @@
     </header>
     <div class="container">
         <div class="sidebar">
-            <input type="text" id="cityInput" placeholder="Enter a city name">
-            <button id="searchButton">Search</button>
+            <div class="input-group">
+                <input type="text" id="cityInput" placeholder="Enter a city name" onkeypress="handleKeyPress(event)">
+                <i class="fas fa-search" id="searchIcon"></i>
+            </div>
+            <hr class="divider"> <!-- This is the line between search bar and history -->
             <div id="searchHistory"></div>
         </div>
         <div class="main-content">
