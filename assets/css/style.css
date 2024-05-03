@@ -46,7 +46,7 @@ body {
 #cityInput {
   width: 100%;
   padding: 10px;
-  padding-right: 40px; /* Make space for the search icon */
+  padding-right: 40px; 
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -59,18 +59,16 @@ body {
   cursor: pointer;
 }
 
-/* Rest of the styles remain the same */
-
 
 .divider {
   border: 0;
   height: 1px;
-  background-color: #ccc;  /* Adjust color to fit design */
-  margin: 20px 0;  /* Adds space above and below the line */
+  background-color: #ccc;  
+  margin: 20px 0;  
 }
 
 
-#searchHistory, #currentWeather, #forecast {
+#currentWeather, #forecast {
   margin-top: 20px;
   padding: 10px;
   background: #f1f1f1;
@@ -88,6 +86,50 @@ body {
 .forecast-item:hover, .history-item:hover {
   background: #e9ecef;
 }
+
+#forecast {
+  display: flex; 
+  justify-content: space-around; 
+  align-items: stretch; 
+  margin-top: 20px; 
+  padding: 10px;
+  background: #f1f1f1; 
+  border-radius: 5px; 
+}
+
+.forecast-item {
+  background-color: #ffffff; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  flex: 1; 
+  margin: 5px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  border-radius: 5px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.forecast-item:hover {
+  background-color: #e9ecef; 
+}
+
+
+
+#searchHistory p {
+  background-color: #ffffff; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  margin-top: 5px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+#searchHistory p:hover {
+  background-color: #f1f1f1; 
+}
+
 
 @media (max-width: 768px) {
   .container {
