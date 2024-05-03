@@ -11,4 +11,4 @@ This Weather Dashboard was created for users to view current and future weather 
 
 # Deployed Application 
 
-[Live Link](https://j3rryb0y13.github.io/My-First-Blog/)
+[Live Link](https://j3rryb0y13.github.io/WeatherDashboard/)
